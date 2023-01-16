@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Special Characters | Taskbar Archival Project</title>
+    <link rel="icon" type="image/x-icon" href="https://www.taskbar.cf/images/end.png">
+  <style>
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: #1B1B1B;
+        color: #E7E8EB;
+      }
+      a {
+        color: #3387CC;
+      }
+    }
+  </style>
+  <style>
+    a:link {
+      color: rgb(166, 41, 228);
+      background-color: transparent;
+      text-decoration: none;
+    }
+    a:visited {
+      color: rgb(252, 196, 205);
+      background-color: transparent;
+      text-decoration: none;
+    }
+    a:hover {
+      color: rgb(255, 0, 247);
+      background-color: transparent;
+      text-decoration: underline;
+    }
+    a:active {
+      color: rgb(81, 0, 255);
+      background-color: transparent;
+      text-decoration: underline;
+    }
+    </style>
+</head>
+<body>
+  <p>Unknown (U+1CBC)</p>
+
+  <input type="text" value="᲼" id="taskbarproj">
+  <button onclick="taskbar()">CopyU+1CBC</button>
+  
+  <script>
+  function taskbar() {
+    // Get the text field
+    var copyText = document.getElementById("taskbarproj");
+  
+    // Select the text field
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); // For mobile devices
+  
+    // Copy the text inside the text field
+    navigator.clipboard.writeText(copyText.value);
+    
+    // Alert the copied text
+    alert("Successfully Copied U+1CBC to clipboard! [This character is INVISIBLE!]");
+  }
+  </script>
+</body>
+</html>
